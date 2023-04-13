@@ -3,7 +3,23 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
              version="2.2">
-    <persistence-unit name="default">
+    <persistence-unit name="ServerSideApp">
+        <jta-data-source>java:/MyPostGresServerSide</jta-data-source>
+        <class>com.example.serversideapp.model.entity.Employee</class>
+        <class>com.example.serversideapp.model.entity.Order</class>
+        <class>com.example.serversideapp.model.entity.PaymentId</class>
+        <class>com.example.serversideapp.model.entity.Payment</class>
+        <class>com.example.serversideapp.model.entity.Product</class>
+        <class>com.example.serversideapp.model.entity.Customer</class>
+        <class>com.example.serversideapp.model.entity.Office</class>
+        <class>com.example.serversideapp.model.entity.OrderdetailId</class>
+        <class>com.example.serversideapp.model.entity.Orderdetail</class>
+        <class>com.example.serversideapp.model.entity.PaymentId</class>
+        <class>com.example.serversideapp.model.entity.Payment</class>
+        <class>com.example.serversideapp.model.entity.Productline</class>
+        <class>com.example.serversideapp.model.entity.User</class>
+        <class>com.example.serversideapp.model.entity.UserRoleId</class>
+        <class>com.example.serversideapp.model.entity.UserRole</class>
 
     </persistence-unit>
 </persistence>
