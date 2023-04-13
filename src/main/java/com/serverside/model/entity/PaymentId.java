@@ -1,10 +1,9 @@
-package com.example.serversideapp.model.entity;
+package com.serversideapp.model.entity;
 
 import org.hibernate.Hibernate;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
-import javax.persistence.Entity;
 import java.io.Serializable;
 import java.util.Objects;
 

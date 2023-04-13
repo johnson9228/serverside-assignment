@@ -1,4 +1,4 @@
-package com.example.serversideapp.model.entity;
+package com.serversideapp.model.entity;
 
 import javax.persistence.*;
 import java.math.BigDecimal;

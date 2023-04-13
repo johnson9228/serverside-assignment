@@ -1,4 +1,4 @@
-package com.example.serversideapp.model.entity;
+package com.serversideapp.model.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

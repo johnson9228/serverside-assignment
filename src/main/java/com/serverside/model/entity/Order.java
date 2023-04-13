@@ -1,4 +1,4 @@
-package com.example.serversideapp.model.entity;
+package com.serversideapp.model.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -6,10 +6,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "employees", schema = "classicmodels")
-public class Employee {
+@Table(name = "orders", schema = "classicmodels")
+public class Order {
     @Id
-    @Column(name = "employeenumber", nullable = false)
+    @Column(name = "ordernumber", nullable = false)
     private Integer id;
 
     public Integer getId() {

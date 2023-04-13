@@ -1,4 +1,4 @@
-package com.example.serversideapp;
+package com.serversideapp;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
