@@ -1,4 +1,4 @@
-package com.serversideapp.model.entity;
+package com.serverside.model.entity;
 
 import org.hibernate.Hibernate;
 

@@ -1,4 +1,4 @@
-package com.serversideapp;
+package com.serverside.app;
 
 import java.io.*;
 import javax.servlet.http.*;

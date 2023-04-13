@@ -5,21 +5,21 @@
              version="2.2">
     <persistence-unit name="classicmodels">
         <jta-data-source>java:/classicmodels</jta-data-source>
-        <class>com.example.serversideapp.model.entity.Employee</class>
-        <class>com.example.serversideapp.model.entity.Order</class>
-        <class>com.example.serversideapp.model.entity.PaymentId</class>
-        <class>com.example.serversideapp.model.entity.Payment</class>
-        <class>com.example.serversideapp.model.entity.Product</class>
-        <class>com.example.serversideapp.model.entity.Customer</class>
-        <class>com.example.serversideapp.model.entity.Office</class>
-        <class>com.example.serversideapp.model.entity.OrderdetailId</class>
-        <class>com.example.serversideapp.model.entity.Orderdetail</class>
-        <class>com.example.serversideapp.model.entity.PaymentId</class>
-        <class>com.example.serversideapp.model.entity.Payment</class>
-        <class>com.example.serversideapp.model.entity.Productline</class>
-        <class>com.example.serversideapp.model.entity.User</class>
-        <class>com.example.serversideapp.model.entity.UserRoleId</class>
-        <class>com.example.serversideapp.model.entity.UserRole</class>
+        <class>com.serverside.model.entity.Employee</class>
+        <class>com.serverside.model.entity.Order</class>
+        <class>com.serverside.model.entity.PaymentId</class>
+        <class>com.serverside.model.entity.Payment</class>
+        <class>com.serverside.model.entity.Product</class>
+        <class>com.serverside.model.entity.Customer</class>
+        <class>com.serverside.model.entity.Office</class>
+        <class>com.serverside.model.entity.OrderdetailId</class>
+        <class>com.serverside.model.entity.Orderdetail</class>
+        <class>com.serverside.model.entity.PaymentId</class>
+        <class>com.serverside.model.entity.Payment</class>
+        <class>com.serverside.model.entity.Productline</class>
+        <class>com.serverside.model.entity.User</class>
+        <class>com.serverside.model.entity.UserRoleId</class>
+        <class>com.serverside.model.entity.UserRole</class>
 
     </persistence-unit>
 </persistence>

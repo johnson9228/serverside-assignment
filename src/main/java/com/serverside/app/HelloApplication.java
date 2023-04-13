@@ -1,4 +1,4 @@
-package com.serversideapp;
+package com.serverside.app;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
