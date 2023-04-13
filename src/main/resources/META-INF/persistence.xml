@@ -3,8 +3,8 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
              version="2.2">
-    <persistence-unit name="ServerSideApp">
-        <jta-data-source>java:/MyPostGresKoolStore</jta-data-source>
+    <persistence-unit name="classicmodels">
+        <jta-data-source>java:/classicmodels</jta-data-source>
         <class>com.example.serversideapp.model.entity.Employee</class>
         <class>com.example.serversideapp.model.entity.Order</class>
         <class>com.example.serversideapp.model.entity.PaymentId</class>
