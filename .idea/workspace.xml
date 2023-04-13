@@ -11,23 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="35a3153d-ea39-4aae-ba16-fc4b0fee6d5f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/serverside/app/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/serverside/app/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/serverside/app/HelloResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/serverside/app/HelloResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/serverside/app/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/serverside/app/HelloServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/Office.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/Office.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/Orderdetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/Orderdetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/OrderdetailId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/OrderdetailId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/PaymentId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/PaymentId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/Productline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/Productline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/UserRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/UserRoleId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/UserRoleId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

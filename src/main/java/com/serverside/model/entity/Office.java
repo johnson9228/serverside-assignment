@@ -7,33 +7,37 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "offices", schema = "classicmodels")
+
+//Query methods
+
+
 public class Office {
     @Id
-    @Column(name = "officecode", nullable = false)
-    private Integer id;
+    @Column(name = "officecode", nullable = false, length = 10)
+    private Integer officeId;
 
-    @Column(name = "city", nullable = false, length = 13)
+    @Column(name = "city", nullable = false, length = 50)
     private String city;
 
-    @Column(name = "phone", nullable = false, length = 16)
+    @Column(name = "phone", nullable = false, length = 50)
     private String phone;
 
-    @Column(name = "addressline1", nullable = false, length = 24)
-    private String addressline1;
+    @Column(name = "addressLine1", nullable = false, length = 50)
+    private String addressLine1;
 
-    @Column(name = "addressline2", length = 9)
-    private String addressline2;
+    @Column(name = "addressLine2", length = 50)
+    private String addressLine2;
 
-    @Column(name = "state", length = 10)
+    @Column(name = "state", length = 50)
     private String state;
 
-    @Column(name = "country", nullable = false, length = 9)
+    @Column(name = "country", nullable = false, length = 50)
     private String country;
 
-    @Column(name = "postalcode", nullable = false, length = 8)
-    private String postalcode;
+    @Column(name = "postalCode", nullable = false, length = 15)
+    private String postalCode;
 
-    @Column(name = "territory", nullable = false, length = 5)
+    @Column(name = "territory", nullable = false, length = 10)
     private String territory;
 
     public String getTerritory() {
@@ -45,11 +49,11 @@ public class Office {
     }
 
     public String getPostalcode() {
-        return postalcode;
+        return postalCode;
     }
 
     public void setPostalcode(String postalcode) {
-        this.postalcode = postalcode;
+        this.postalCode = postalcode;
     }
 
     public String getCountry() {
@@ -69,19 +73,19 @@ public class Office {
     }
 
     public String getAddressline2() {
-        return addressline2;
+        return addressLine2;
     }
 
     public void setAddressline2(String addressline2) {
-        this.addressline2 = addressline2;
+        this.addressLine2 = addressline2;
     }
 
     public String getAddressline1() {
-        return addressline1;
+        return addressLine1;
     }
 
     public void setAddressline1(String addressline1) {
-        this.addressline1 = addressline1;
+        this.addressLine1 = addressline1;
     }
 
     public String getPhone() {
@@ -101,10 +105,10 @@ public class Office {
     }
 
     public Integer getId() {
-        return id;
+        return officeId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setId(Integer officeId) {
+        this.officeId = officeId;
     }
 }
