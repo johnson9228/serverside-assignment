@@ -20,6 +20,7 @@
         <class>com.serverside.model.entity.User</class>
         <class>com.serverside.model.entity.UserRoleId</class>
         <class>com.serverside.model.entity.UserRole</class>
+        <class>com.serverside.model.entity.Product</class>
 
     </persistence-unit>
 </persistence>

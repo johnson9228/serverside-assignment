@@ -10,12 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35a3153d-ea39-4aae-ba16-fc4b0fee6d5f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/serverside/controller/EmployeeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/serverside/model/sessionbean/EmployeeSessionBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/serverside/model/sessionbean/EmployeeSessionBeanLocal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/staff.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/serverside/model/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,10 +21,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="com.haulmont.jpb.JpaEntity" />
         <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="com.haulmont.jpb.JpaEntity" />
       </list>
     </option>
   </component>
@@ -47,7 +43,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
   </component>
