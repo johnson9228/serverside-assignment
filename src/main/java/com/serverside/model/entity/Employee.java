@@ -6,7 +6,8 @@ import javax.persistence.*;
 @Table(name = "employees", schema = "classicmodels")
 
 //Query methods
-
+@NamedQuery(name = "getAllEmployees", query = "SELECT e FROM Employee e")
+@NamedQuery(name = "getEmployee", query = "SELECT e FROM Employee e WHERE e.employeeId = :employeeId")
 
 public class Employee {
     @Id
