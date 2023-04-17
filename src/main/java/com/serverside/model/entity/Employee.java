@@ -1,71 +1,71 @@
 package com.serverside.model.entity;
 
 import javax.persistence.*;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "employees", schema = "classicmodels")
-
-//Query methods
-@NamedQuery(name = "getAllEmployees", query = "SELECT e FROM Employee e")
-@NamedQuery(name = "getEmployee", query = "SELECT e FROM Employee e WHERE e.employeeId = :employeeId")
-
 public class Employee {
     @Id
-    @Column(name = "employeeNumber", nullable = false, length = 11)
-    private Integer employeeId;
+    @Column(name = "employeenumber", nullable = false)
+    private Integer id;
 
-    @Column(name = "lastName", nullable = false, length = 50)
-    private String lastName;
+    @Column(name = "lastname", nullable = false, length = 9)
+    private String lastname;
 
-    @Column(name = "firstName", nullable = false, length = 50)
-    private String firstName;
+    @Column(name = "firstname", nullable = false, length = 8)
+    private String firstname;
 
-    @Column(name = "extension", nullable = false, length = 10)
+    @Column(name = "extension", nullable = false, length = 5)
     private String extension;
 
-    @Column(name = "email", nullable = false, length = 100)
+    @Column(name = "email", nullable = false, length = 31)
     private String email;
 
-    @Column(name = "officeCode", nullable = false, length = 10)
-    private String officeCode;
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "officecode", nullable = false)
+    private Office officecode;
 
-    @Column(name = "reportsTo", nullable = true, length = 11)
-    private Integer reportsTo;
+    @Column(name = "reportsto", length = 4)
+    private String reportsto;
 
-    @Column(name = "jobTitle", nullable = false, length = 50)
-    private String jobTitle;
+    @Column(name = "jobtitle", nullable = false, length = 20)
+    private String jobtitle;
 
-    //Getters and Setters
-    public Integer getEmployeeNumber() {
-        return employeeId;
+    @OneToMany(mappedBy = "salesrepemployeenumber")
+    private Set<Customer> customers = new LinkedHashSet<>();
+
+    public Set<Customer> getCustomers() {
+        return customers;
     }
 
-    public void setEmployeeNumber(Integer employeeId) {
-        this.employeeId = employeeId;
+    public void setCustomers(Set<Customer> customers) {
+        this.customers = customers;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getJobtitle() {
+        return jobtitle;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setJobtitle(String jobtitle) {
+        this.jobtitle = jobtitle;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getReportsto() {
+        return reportsto;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setReportsto(String reportsto) {
+        this.reportsto = reportsto;
     }
 
-    public String getExtension() {
-        return extension;
+    public Office getOfficecode() {
+        return officecode;
     }
 
-    public void setExtension(String extension) {
-        this.extension = extension;
+    public void setOfficecode(Office officecode) {
+        this.officecode = officecode;
     }
 
     public String getEmail() {
@@ -76,27 +76,35 @@ public class Employee {
         this.email = email;
     }
 
-    public String getOfficeCode() {
-        return officeCode;
+    public String getExtension() {
+        return extension;
     }
 
-    public void setOfficeCode(String officeCode) {
-        this.officeCode = officeCode;
+    public void setExtension(String extension) {
+        this.extension = extension;
     }
 
-    public Integer getReportsTo() {
-        return reportsTo;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setReportsTo(Integer reportsTo) {
-        this.reportsTo = reportsTo;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    public String getJobTitle() {
-        return jobTitle;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setJobTitle(String jobTitle) {
-        this.jobTitle = jobTitle;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }
