@@ -6,15 +6,21 @@ import java.util.Set;
 
 @Entity
 @Table(name = "employees", schema = "classicmodels")
+@NamedQuery(name="Employee.getAllEmployees", query = "SELECT e FROM Employee e")
+@NamedQuery(name="Employee.getEmployee", query = "SELECT e FROM  Employee e WHERE e.id = :employeeId")
+
 public class Employee {
+
     @Id
     @Column(name = "employeenumber", nullable = false)
     private Integer id;
+
 
     @Column(name = "lastname", nullable = false, length = 9)
     private String lastname;
 
     @Column(name = "firstname", nullable = false, length = 8)
+
     private String firstname;
 
     @Column(name = "extension", nullable = false, length = 5)
@@ -23,14 +29,15 @@ public class Employee {
     @Column(name = "email", nullable = false, length = 31)
     private String email;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "officecode", nullable = false)
     private Office officecode;
 
-    @Column(name = "reportsto", length = 4)
+    @Column(name = "reportsto", length = 11)
     private String reportsto;
 
-    @Column(name = "jobtitle", nullable = false, length = 20)
+    @Column(name = "jobtitle", nullable = false, length = 50)
     private String jobtitle;
 
     @OneToMany(mappedBy = "salesrepemployeenumber")

@@ -47,13 +47,6 @@ public class Customer {
     @Column(name = "creditlimit", precision = 8, scale = 2)
     private BigDecimal creditlimit;
 
-    public BigDecimal getCreditlimit() {
-        return creditlimit;
-    }
-
-    public void setCreditlimit(BigDecimal creditlimit) {
-        this.creditlimit = creditlimit;
-    }
 
     public Employee getSalesrepemployeenumber() {
         return salesrepemployeenumber;
@@ -62,6 +55,16 @@ public class Customer {
     public void setSalesrepemployeenumber(Employee salesrepemployeenumber) {
         this.salesrepemployeenumber = salesrepemployeenumber;
     }
+
+    public BigDecimal getCreditlimit() {
+        return creditlimit;
+    }
+
+    public void setCreditlimit(BigDecimal creditlimit) {
+        this.creditlimit = creditlimit;
+    }
+
+
 
     public String getCountry() {
         return country;

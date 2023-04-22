@@ -1,15 +1,11 @@
 package com.serverside.model.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "offices", schema = "classicmodels")
-
-//Query methods
-
+@NamedQuery(name="Office.getAllOffice", query = "SELECT e FROM Office e")
+@NamedQuery(name="Office.getOffice", query = "SELECT e FROM Office e WHERE e.officeId = :officeId")
 
 public class Office {
     @Id

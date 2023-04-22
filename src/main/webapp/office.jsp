@@ -1,12 +1,11 @@
-<%@ page import="com.serverside.model.entity.Employee" %>
 <%@ page import="java.util.List" %>
-<%@ page import="com.serverside.controller.EmployeeController" %>
+<%@ page import="com.serverside.model.entity.Office" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Staff</title>
+    <title>Office</title>
 
     <!-- CSS links -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet">
@@ -134,6 +133,7 @@
                             <li><a href="index.html">Shop</a></li>
                             <li><a href="product-detail.html">Details</a></li>
                             <li><a href="EmployeeReadController">Staff</a></li>
+                            <li><a href="OfficeReadController">Office</a></li>
                         </ul>
                     </div> <!-- /.list-menu -->
                 </div> <!-- /.col-md-6 -->
@@ -148,7 +148,6 @@
 </header> <!-- /.site-header -->
 
 <!-- Content section -->
-<!-- Display table list of employee -->
 <%
     int currentPage = (int) request.getAttribute("currentPage");
     int recordsPerPage = (int) request.getAttribute("recordsPerPage");
@@ -159,7 +158,7 @@
 
 <nav class="navbar navbar-light bg-light" style="margin: 0">
     <!-- Search bar for the table -->
-    <form class="form-inline md-form mr-auto mb-4" action="EmployeeReadController" method="post">
+    <form class="form-inline md-form mr-auto mb-4" action="OfficeReadController" method="post">
         <input class="form-control" type="text" aria-label="Search" name="keyword"/>
         <select class="form-control" id="direction" name="direction">
             <option value="ASC">ascending</option>
@@ -181,45 +180,47 @@
     </div>
 </nav>
 
-<!-- Employee table -->
+<!-- Office table -->
 <div style="display: flex">
-    <table class="table table-striped table-bordered table-sm">
+    <table class="table table-striped table-bordered table-sm" style="text-align: center;">
         <tr>
             <th>ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>Extension</th>
-            <th>Office Code</th>
-            <th>Reports to</th>
-            <th>Job Title</th>
+            <th>City</th>
+            <th>Phone</th>
+            <th>Address Line 1</th>
+            <th>Address Line 2</th>
+            <th>State</th>
+            <th>Country</th>
+            <th>Postal Code</th>
+            <th>Territory</th>
             <th>Update</th>
             <th>Delete</th>
         </tr>
         <%
-            List<Employee> employeeList = (List<Employee>) request.getAttribute("employeeList");
+            List<Office> officeList = (List<Office>) request.getAttribute("officeList");
 
-            if (employeeList != null && employeeList.size() != 0) {
-                for (int i = 0; i < employeeList.size(); i++) {
+            if (officeList != null && officeList.size() != 0) {
+                for (int i = 0; i < officeList.size(); i++) {
 
-                    Employee emp = employeeList.get(i);
+                    Office office = officeList.get(i);
 
                     out.println("<tr>");
-                    out.print("<td>" + emp.getId() + "</td>");
-                    out.println("<td>" + emp.getFirstname() + "</td>");
-                    out.println("<td>" + emp.getLastname() + "</td>");
-                    out.println("<td>" + emp.getEmail() + "</td>");
-                    out.println("<td>" + emp.getExtension() + "</td>");
-                    out.println("<td>" + emp.getOfficecode().getId() + "</td>");
-                    out.println("<td>" + emp.getReportsto() + "</td>");
-                    out.println("<td>" + emp.getJobtitle() + "</td>");
-                    out.println("<td><a href=\"EmployeeController?id=" + emp.getId() + "&choice=" + 3 + "\">Update</a></td>");
-                    out.println("<td><a href=\"EmployeeController?id=" + emp.getId() + "&choice=" + 4 + "\">Delete</a></td>");
+                    out.print("<td>" + office.getId() + "</td>");
+                    out.println("<td>" + office.getCity() + "</td>");
+                    out.println("<td>" + office.getPhone() + "</td>");
+                    out.println("<td>" + office.getAddressline1() + "</td>");
+                    out.println("<td>" + office.getAddressline2() + "</td>");
+                    out.println("<td>" + office.getState() + "</td>");
+                    out.println("<td>" + office.getCountry() + "</td>");
+                    out.println("<td>" + office.getPostalcode() + "</td>");
+                    out.println("<td>" + office.getTerritory() + "</td>");
+                    out.println("<td><a href=\"OfficeController?id=" + office.getId() + "&choice=" + 3 + "\">Update</a></td>");
+                    out.println("<td><a href=\"OfficeController?id=" + office.getId() + "&choice=" + 4 + "\">Delete</a></td>");
                     out.println("</tr>");
                 }
             } else {
                 out.println("<tr>");
-                out.println("<td colspan='10'>" + "No record" + "</td>");
+                out.println("<td colspan='11'>" + "No record" + "</td>");
                 out.println("</tr>");
             }
         %>
@@ -231,17 +232,17 @@
 <div>
     <ul style="list-style-type: none; display: flex;
     flex-direction: row; justify-content: center;
-    align-items: center">
+    align-items: center" ;>
         <%
             if (currentPage != 1 && noOfPages != 0) {
                 out.println("<li style=\"padding-right: 50px\">");
-                out.println("<a class=\"page-link\" href=\"" + "EmployeeReadController?recordsPerPage=" + recordsPerPage
+                out.println("<a class=\"page-link\" href=\"" + "OfficeReadController?recordsPerPage=" + recordsPerPage
                         + "&currentPage=1" + "&keyword=" + keyword + "&direction=" + direction + "\">First</a>");
                 out.println("</li>");
         %>
         <li style="padding-right: 50px">
             <%
-                out.println("<a class=\"page-link\" href=\"" + "EmployeeReadController?recordsPerPage=" + recordsPerPage
+                out.println("<a class=\"page-link\" href=\"" + "OfficeReadController?recordsPerPage=" + recordsPerPage
                         + "&currentPage=" + (currentPage - 1) + "&keyword=" + keyword + "&direction=" + direction + "\">Previous</a>");
             %>
         </li>
@@ -249,11 +250,11 @@
             }
             if (currentPage < noOfPages) {
                 out.println("<li style=\"padding-right: 50px\">");
-                out.println("<a class=\"page-link\" href=\"" + "EmployeeReadController?recordsPerPage=" + recordsPerPage
+                out.println("<a class=\"page-link\" href=\"" + "OfficeReadController?recordsPerPage=" + recordsPerPage
                         + "&currentPage=" + (currentPage + 1) + "&keyword=" + keyword + "&direction=" + direction + "\">Next</a>");
                 out.println("</li>");
                 out.println("<li style=\"padding-right: 50px\">");
-                out.println("<a class=\"page-link\" href=\"" + "EmployeeReadController?recordsPerPage=" + recordsPerPage
+                out.println("<a class=\"page-link\" href=\"" + "OfficeReadController?recordsPerPage=" + recordsPerPage
                         + "&currentPage=" + noOfPages + "&keyword=" + keyword + "&direction=" + direction + "\">Last</a>");
                 out.println("</li>");
             }
@@ -262,32 +263,34 @@
 </div>
 <%
     if (noOfPages != 0) {
-        out.println("<p style=\"text-align: center; justify-content: center\">");
+        out.println("<p style=\"text-align: center;\">");
         out.println(currentPage + " of " + noOfPages);
         out.println("</p>");
     }
 %>
 
-<!-- Create employee form -->
-<div class="form-popup" id="createEmployeeForm" style="display: none">
-    <form action="EmployeeController" method="post" class="form-container">
-        <h1>Create New Employee Profile</h1>
+<!-- Create office form -->
+<div class="form-popup" id="createOfficeForm" style="display: none">
+    <form action="OfficeController" method="post" class="form-container">
+        <h1>Create New Office</h1>
         <fieldset>
-            <legend>Employee Details</legend>
+            <legend>Office Details</legend>
             <br>
-            <input type="text" name="firstName" placeholder="First Name"/>
+            <input type="text" name="city" placeholder="City"/>
             <br>
-            <input type="text" name="lastName" placeholder="Last Name"/>
+            <input type="text" name="phone" placeholder="Phone Number"/>
             <br>
-            <input type="email" name="email" placeholder="Email"/>
+            <input type="text" name="addressLine1" placeholder="Address Line 1"/>
             <br>
-            <input type="text" name="officeCode" placeholder="Office Code"/>
+            <input type="text" name="addressLine2" placeholder="Address Line 2"/>
             <br>
-            <input type="text" name="extension" placeholder="Extension"/>
+            <input type="text" name="state" placeholder="State"/>
             <br>
-            <input type="text" name="reportsTo" placeholder="Reports To"/>
+            <input type="text" name="country" placeholder="Country"/>
             <br>
-            <input type="text" name="jobTitle" placeholder="Job Title"/>
+            <input type="text" name="postalCode" placeholder="Postal Code"/>
+            <br>
+            <input type="text" name="territory" placeholder="Territory"/>
             <input type="hidden" name="choice" value="2"/>
         </fieldset>
         <button type="submit">CREATE</button>
@@ -299,14 +302,13 @@
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 <script>
     function openCreateForm() {
-        document.getElementById("createEmployeeForm").style.display = "block";
+        document.getElementById("createOfficeForm").style.display = "block";
     }
 
     function closeCreateForm() {
-        document.getElementById("createEmployeeForm").style.display = "none";
+        document.getElementById("createOfficeForm").style.display = "none";
     }
 </script>
 </body>
