@@ -23,5 +23,6 @@
         <class>com.serverside.model.entity.Product</class>
         <class>com.serverside.model.entity.Employee</class>
 
+
     </persistence-unit>
 </persistence>
