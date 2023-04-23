@@ -2,9 +2,14 @@ package com.serverside.model.entity;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "customers", schema = "classicmodels")
+//Query
+@NamedQuery(name = "Customer.findAll", query = "SELECT c FROM Customer c")
+@NamedQuery(name = "Customer.findById", query = "SELECT c FROM Customer c WHERE c.id = :customernumber")
 public class Customer {
     @Id
     @Column(name = "customernumber", nullable = false)
@@ -40,20 +45,22 @@ public class Customer {
     @Column(name = "country", nullable = false, length = 12)
     private String country;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "salesrepemployeenumber")
     private Employee salesrepemployeenumber;
 
     @Column(name = "creditlimit", precision = 8, scale = 2)
     private BigDecimal creditlimit;
 
+    @OneToMany(mappedBy = "customernumber")
+    private Set<Payment> payments = new LinkedHashSet<>();
 
-    public Employee getSalesrepemployeenumber() {
-        return salesrepemployeenumber;
+    public Set<Payment> getPayments() {
+        return payments;
     }
 
-    public void setSalesrepemployeenumber(Employee salesrepemployeenumber) {
-        this.salesrepemployeenumber = salesrepemployeenumber;
+    public void setPayments(Set<Payment> payments) {
+        this.payments = payments;
     }
 
     public BigDecimal getCreditlimit() {
@@ -64,7 +71,13 @@ public class Customer {
         this.creditlimit = creditlimit;
     }
 
+    public Employee getSalesrepemployeenumber() {
+        return salesrepemployeenumber;
+    }
 
+    public void setSalesrepemployeenumber(Employee salesrepemployeenumber) {
+        this.salesrepemployeenumber = salesrepemployeenumber;
+    }
 
     public String getCountry() {
         return country;

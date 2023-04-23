@@ -10,7 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35a3153d-ea39-4aae-ba16-fc4b0fee6d5f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/LoginSuccess.html" beforeDir="false" />
+
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/create-payment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/serverside/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/serverside/controller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/check-customer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/check-customer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/check-payment.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/check-payment.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/create-customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/create-customer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/customer-delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/customer-delete.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/customer-update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/customer-update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/payment-delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/payment-delete.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/payment-update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/payment-update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/payment.jsp" beforeDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +35,13 @@
         <option value="com.haulmont.jpb.JpaEntity" />
         <option value="Interface" />
         <option value="Class" />
+<<<<<<< HEAD
         <option value="HTML File" />
         <option value="jsf" />
+=======
+>>>>>>> 4f91989 (rebase)
         <option value="Jsp File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -52,7 +68,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
   </component>
