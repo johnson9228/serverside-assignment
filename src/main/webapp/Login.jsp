@@ -12,12 +12,11 @@
 </head>
 <body>
 
-<form action="post" action="<%=response.encodeURL("j_security_check")%>">
+<form method="post" action="<%=response.encodeURL("j_security_check")%>">
     Username: <input type="text" name="j_username"/>
     Password: <input type="password" name="j_password"/>
     <input type="submit" value="Log In">
 </form>
-
 
 </body>
 </html>
