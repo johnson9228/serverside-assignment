@@ -10,21 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35a3153d-ea39-4aae-ba16-fc4b0fee6d5f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/LoginSuccess.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Logout.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jboss-web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/serverside/controller/Logout.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/DeniedAccess.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/DeniedAccess.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ProductCatalog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ProductCatalog.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ProductUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ProductUpdate.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ProductlineUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ProductlineUpdate.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/adminProductCatalog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/adminProductCatalog.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/adminProductPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/adminProductPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/LoginSuccess.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +204,7 @@
       <workItem from="1681968589025" duration="11688000" />
       <workItem from="1682231762325" duration="4025000" />
       <workItem from="1682235867684" duration="3483000" />
-      <workItem from="1682239408493" duration="5967000" />
+      <workItem from="1682239408493" duration="6274000" />
     </task>
     <servers />
   </component>
