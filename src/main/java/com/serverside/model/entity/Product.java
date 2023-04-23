@@ -7,6 +7,10 @@ import java.util.Set;
 
 @Entity
 @Table(name = "products", schema = "classicmodels")
+
+@NamedQuery(name = "product.findById", query = "SELECT p FROM Product p WHERE p.id = :id")
+@NamedQuery(name = "product.findAll", query = "SELECT p FROM Product p")
+
 public class Product {
     @Id
     @Column(name = "productcode", nullable = false, length = 9)
