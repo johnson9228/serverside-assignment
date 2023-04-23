@@ -10,7 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35a3153d-ea39-4aae-ba16-fc4b0fee6d5f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/payment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ProductCatalog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ProductCatalog.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ProductUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ProductUpdate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ProductlineList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ProductlineList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ProductlineUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ProductlineUpdate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/adminProductCatalog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/adminProductCatalog.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +58,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
   </component>
