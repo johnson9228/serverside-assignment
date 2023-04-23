@@ -25,5 +25,4 @@ public interface EmployeeSessionBeanLocal {
 
     //Delete method
     public int deleteEmployee(int employeeId) throws EJBException;
-
 }

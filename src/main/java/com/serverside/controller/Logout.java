@@ -1,3 +1,4 @@
+package com.serverside.controller;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -8,7 +9,9 @@ import java.io.IOException;
 public class Logout extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        request.logout();
+        RequestDispatcher req = request.getRequestDispatcher("index.html");
+        req.forward(request, response);
     }
 
     @Override
