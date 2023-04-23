@@ -5,12 +5,14 @@ import java.math.BigDecimal;
 
 @Entity
 @Table(name = "payments", schema = "classicmodels")
+@NamedQuery(name="Payment.findAll", query = "SELECT p FROM Payment p")
+@NamedQuery(name="Payment.findbyId", query = "SELECT p FROM Payment p WHERE p.id.checknumber = :checkNumber AND p.id.customernumber=:customerNumber")
 public class Payment {
     @EmbeddedId
     private PaymentId id;
 
     @MapsId("customernumber")
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "customernumber", nullable = false)
     private Customer customernumber;
 

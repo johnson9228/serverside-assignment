@@ -3,6 +3,7 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
              version="2.2">
+
     <persistence-unit name="classicmodels">
         <jta-data-source>java:/classicmodels</jta-data-source>
         <class>com.serverside.model.entity.Employee</class>
@@ -22,6 +23,8 @@
         <class>com.serverside.model.entity.UserRole</class>
         <class>com.serverside.model.entity.Product</class>
         <class>com.serverside.model.entity.Employee</class>
+        <class>com.serverside.model.entity.Customer</class>
+
 
 
     </persistence-unit>
