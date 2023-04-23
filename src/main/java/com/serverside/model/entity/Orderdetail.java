@@ -1,11 +1,13 @@
 package com.serverside.model.entity;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
 
 @Entity
 @Table(name = "orderdetails", schema = "classicmodels")
+@NamedQuery(name = "Orderdetail.findbyId", query = "SELECT od FROM Orderdetail od WHERE od.id.ordernumber = :id AND od.id.productcode = :ID")
+@NamedQuery(name = "Orderdetail.findAll", query = "SELECT od FROM Orderdetail od ")
 public class Orderdetail {
+
     @EmbeddedId
     private OrderdetailId id;
 
@@ -22,8 +24,8 @@ public class Orderdetail {
     @Column(name = "quantityordered", nullable = false)
     private Integer quantityordered;
 
-    @Column(name = "priceeach", nullable = false, precision = 5, scale = 2)
-    private BigDecimal priceeach;
+    @Column(name = "priceeach", nullable = false)
+    private double priceeach;
 
     @Column(name = "orderlinenumber", nullable = false)
     private Integer orderlinenumber;
@@ -36,11 +38,11 @@ public class Orderdetail {
         this.orderlinenumber = orderlinenumber;
     }
 
-    public BigDecimal getPriceeach() {
+    public double getPriceeach() {
         return priceeach;
     }
 
-    public void setPriceeach(BigDecimal priceeach) {
+    public void setPriceeach(Double priceeach) {
         this.priceeach = priceeach;
     }
 
@@ -52,16 +54,14 @@ public class Orderdetail {
         this.quantityordered = quantityordered;
     }
 
-    public Product getProductcode() {
-        return productcode;
+    public Product getProductcode() {return productcode;
     }
 
     public void setProductcode(Product productcode) {
         this.productcode = productcode;
     }
 
-    public Order getOrdernumber() {
-        return ordernumber;
+    public Order getOrdernumber() {return ordernumber;
     }
 
     public void setOrdernumber(Order ordernumber) {
