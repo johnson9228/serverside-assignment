@@ -13,9 +13,7 @@
 <body>
 Username/Password Error - Failed to log in due to authentication error
 
-<%
-    session.invalidate();
-%>
+
 <p>
     <a href="index.html">Back to Main Page</a>
 </p>
