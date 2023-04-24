@@ -37,6 +37,12 @@
             transform: translate(-50%, -50%);
         }
 
+        .form-wrapper {
+            width: 30%;
+            margin: auto;
+            margin-top: 1rem;
+        }
+
         /* Add styles to the form container */
         .form-container {
             max-width: 500px;
@@ -198,7 +204,6 @@
     </nav>
 </div>
 
-
 <!-- Employee table -->
 <div style="display: flex">
     <table class="table table-striped table-bordered table-sm">
@@ -289,30 +294,45 @@
 <!-- Create employee form -->
 <div class="form-popup" id="createEmployeeForm" style="display: none">
     <form action="EmployeeController" method="post" class="form-container">
-        <h1>Create New Employee Profile</h1>
-        <fieldset>
-            <legend>Employee Details</legend>
-            <br>
-            <input type="text" name="firstName" placeholder="First Name"/>
-            <br>
-            <input type="text" name="lastName" placeholder="Last Name"/>
-            <br>
-            <input type="email" name="email" placeholder="Email"/>
-            <br>
-            <input type="text" name="officeCode" placeholder="Office Code"/>
-            <br>
-            <input type="text" name="extension" placeholder="Extension"/>
-            <br>
-            <input type="text" name="reportsTo" placeholder="Reports To"/>
-            <br>
-            <input type="text" name="jobTitle" placeholder="Job Title"/>
+        <h1 style="text-align: center;">Create New Employee Profile</h1>
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name">
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label for="officeCode">Office Code</label>
+            <input type="text" class="form-control" id="officeCode" name="officeCode" placeholder="Office Code">
+        </div>
+        <div class="form-group">
+            <label for="extension">Extension</label>
+            <input type="text" class="form-control" id="extension" name="extension" placeholder="Extension">
+        </div>
+        <div class="form-group">
+            <label for="reportsTo">Reports To</label>
+            <input type="text" class="form-control" id="reportsTo" name="reportsTo" placeholder="Reports To">
+        </div>
+        <div class="form-group">
+            <label for="jobTitle">Job Title</label>
+            <input type="text" class="form-control" id="jobTitle" name="jobTitle" placeholder="Job Title">
+        </div>
             <input type="hidden" name="choice" value="2"/>
-        </fieldset>
-        <button type="submit">CREATE</button>
-        <button type="reset">CLEAR</button>
-        <button type="button" onclick="closeCreateForm()">CANCEL</button>
+        <div style="justify-content: center; display: flex">
+            <button style="margin-right: 30px" class="btn-primary btn" type="submit">CREATE</button>
+            <button style="margin-right: 30px" class="btn btn-warning" type="reset">CLEAR</button>
+            <button class="btn btn-info" type="button" onclick="closeCreateForm()">CANCEL</button>
+        </div>
+
     </form>
 </div>
+
 <footer class="site-footer">
     <div class="bottom-footer">
         <div class="container">
