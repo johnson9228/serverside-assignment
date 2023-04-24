@@ -161,8 +161,8 @@
                     <td><%=p.getQuantityinstock()%></td>
                     <td><%=p.getBuyprice()%></td>
                     <td><%=p.getMsrp()%></td>
-                    <td><a href="ProductController?id=<%=p.getId()%>">UPDATE</a></td>
-                    <td><a href="ProductController?id=<%=p.getId()%>">DELETE</a></td>
+                    <td><a href="ProductController?id=<%=p.getId()%>" style="color: #007bff;">UPDATE</a></td>
+                    <td><a href="ProductController?id=<%=p.getId()%>" style="color: #dc3545;">DELETE</a></td>
                 </tr>
 
 

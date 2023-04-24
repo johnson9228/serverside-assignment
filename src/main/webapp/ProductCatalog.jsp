@@ -166,9 +166,6 @@
                     <input type="hidden" name="admin" value="false"/>
                 </form>
             </nav>
-            <div class="col-md-4">
-
-            </div>
 
             <%
                 List<Product> products = (List<Product>) request.getAttribute("products");

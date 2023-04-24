@@ -88,7 +88,8 @@
             %>
         </div>
         <div class="right">
-            <button class="btn btn-primary" type="update">Update</button>
+            <button class="btn btn-primary" name="UPDATE" value="UPDATE">Update</button>
+            <button class="btn btn-warning" name="DELETE" value="DELETE">Delete</button>
         </div>
     </form>
 </div>

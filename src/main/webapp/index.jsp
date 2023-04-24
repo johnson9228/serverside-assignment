@@ -82,13 +82,14 @@
                         <ul>
                             <li><a href="index.html">Shop</a></li>
                             <li><a href="ProductPaginationServlet?currentPage=1&recordsPerPage=12&admin=false&keyword=&sort=ASC">Catalogs</a></li>
+                            <li><a href="ProductPaginationServlet?currentPage=1&recordsPerPage=12&admin=true&keyword=&sort=ASC">Product Edit</a></li>
                             <li><a href="ProductlineDisplayServlet?currentPage=1&recordsPerPage=12&&keyword=&sort=ASC">Productline</a></li>
                             <li><a href="EmployeeReadController">Staff</a></li>
                             <li><a href="customer.html">Customer</a></li>
                             <li><a href="OfficeReadController">Office</a></li>
                             <li><a href="payment.html">Payment</a></li>
                             <li><a href="order.html">Order</a></li>
-                            <li><a href="orderdetails.html.html">Order Details</a></li>
+                            <li><a href="orderdetails.html">Order Details</a></li>
 
                         </ul>
                     </div> <!-- /.list-menu -->

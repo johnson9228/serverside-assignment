@@ -26,6 +26,10 @@
         table th, td {
             text-align: center;
         }
+        .table-header{
+            border-color: #7abaff;
+            background-color: #b8daff;
+        }
     </style>
 </head>
 <body>
@@ -135,9 +139,9 @@
                     <i class="fa fa-plus-circle" aria-hidden="true" style="font-size: 30px;float: right"></i>
                 </a>
             </form>
-
+            <br>
             <table class="table table-striped table-bordered table-sm">
-                <tr>
+                <tr class="table-header">
                     <th>Productline</th>
                     <th>Text Description</th>
                     <th>HTML Description</th>
@@ -155,8 +159,8 @@
                     <td><%=pl.getTextdescription()%></td>
                     <td><%=pl.getHtmldescription()%></td>
                     <td><%=pl.getImage()%></td>
-                    <td><a href="ProductlineController?id=<%=pl.getId()%>">UPDATE</a></td>
-                    <td><a href="ProductlineController?id=<%=pl.getId()%>">DELETE</a></td>
+                    <td><a href="ProductlineController?id=<%=pl.getId()%>" style="color: #007bff;">UPDATE</a></td>
+                    <td><a href="ProductlineController?id=<%=pl.getId()%>" style="color: #dc3545;">DELETE</a></td>
                 </tr>
                 <%      }
                 }else{%>
