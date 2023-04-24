@@ -10,7 +10,9 @@
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet">
 
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/templatemo-misc.css">
     <link rel="stylesheet" href="css/templatemo-style.css">
 
@@ -36,6 +38,7 @@
             right: 28px;
             width: 280px;
         }
+
         /* The popup form - hidden by default */
         .form-popup {
             overflow-x: hidden;
@@ -48,12 +51,14 @@
             -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
         }
+
         /* Add styles to the form container */
         .form-container {
             max-width: 500px;
             padding: 10px;
             background-color: white;
         }
+
         /* Full-width input fields */
         .form-container input[type=text], .form-container input[type=password] {
             width: 100%;
@@ -62,12 +67,13 @@
             border: none;
             background: #f1f1f1;
         }
+
         /* When the inputs get focus, do something */
-        .form-container input[type=text]:focus, .form-container input[type=password]:focus
-        {
+        .form-container input[type=text]:focus, .form-container input[type=password]:focus {
             background-color: #ddd;
             outline: none;
         }
+
         /* Set a style for the submit button */
         .form-container .btn {
             background-color: #4CAF50;
@@ -79,17 +85,28 @@
             margin-bottom: 10px;
             opacity: 0.8;
         }
+
         /* Add a red background color to the cancel button */
         .form-container .cancel {
             background-color: red;
         }
+
         /* Add some hover effects to buttons */
         .form-container .btn:hover, .open-button:hover {
             opacity: 1;
         }
+
         .pageref {
             text-align: center;
             font-weight: bold;
+        }
+        body{
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        footer{
+            margin-top: auto;
         }
     </style>
     <%--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">--%>
@@ -103,8 +120,8 @@
             <div class="row">
                 <div class="col-md-6 col-sm-6">
                     <div class="top-header-left">
-                        <a href="#">Sign Up</a>
-                        <a href="#">Log In</a>
+                        <a href="Logout.jsp">Logout</a>
+
                     </div> <!-- /.top-header-left -->
                 </div> <!-- /.col-md-6 -->
                 <div class="col-md-6 col-sm-6">
@@ -129,46 +146,39 @@
                         <h1><a href="#">Kool Store</a></h1>
                     </div> <!-- /.logo -->
                 </div> <!-- /.col-md-4 -->
-                <div class="col-md-8 col-sm-6 col-xs-4">
-                    <div class="main-menu">
-                        <a href="#" class="toggle-menu">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                        <ul class="menu">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Catalogs</a></li>
-                            <li><a href="#">FAQs</a></li>
-                            <li><a href="#">Policies</a></li>
-                            <li><a href="#">About</a></li>
-                        </ul>
-                    </div> <!-- /.main-menu -->
-                </div> <!-- /.col-md-8 -->
+
             </div> <!-- /.row -->
         </div> <!-- /.container -->
     </div> <!-- /.main-header -->
     <div class="main-nav">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-sm-7">
+                <div class="col-md">
                     <div class="list-menu">
                         <ul>
                             <li><a href="index.html">Shop</a></li>
-                            <li><a href="product-detail.html">Details</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li>
+                                <a href="ProductPaginationServlet?currentPage=1&recordsPerPage=12&admin=false&keyword=&sort=ASC">Catalogs</a>
+                            </li>
+                            <li>
+                                <a href="ProductPaginationServlet?currentPage=1&recordsPerPage=12&admin=true&keyword=&sort=ASC">Product
+                                    Edit</a></li>
+                            <li><a href="ProductlineDisplayServlet?currentPage=1&recordsPerPage=12&&keyword=&sort=ASC">Productline</a>
+                            </li>
+                            <li><a href="EmployeeReadController">Staff</a></li>
+                            <li><a href="customer.html">Customer</a></li>
+                            <li><a href="OfficeReadController">Office</a></li>
+                            <li><a href="payment.html">Payment</a></li>
                             <li><a href="order.html">Order</a></li>
+                            <li><a href="orderdetails.html">Order Details</a></li>
+
                         </ul>
                     </div> <!-- /.list-menu -->
-                </div> <!-- /.col-md-6 -->
-                <div class="col-md-6 col-sm-5">
-                    <div class="notification">
-                        <span>Free Shipping on any order above $50</span>
-                    </div>
                 </div> <!-- /.col-md-6 -->
             </div> <!-- /.row -->
         </div> <!-- /.container -->
     </div> <!-- /.main-nav -->
 </header> <!-- /.site-header -->
-
 
 
 <% //Relate the following codes to PaginationServlet
@@ -181,11 +191,12 @@
 <form class="form-inline md-form mr-auto mb-4"
       action="OrderPaginationServlet" method="get">
     <input class="form-control mr-sm-2" type="text" aria-label="Search"
-           name="keyword" />
+           name="keyword"/>
     <button class="btn aqua-gradient btn-rounded btn-sm my-0 btn btn-info"
-            type="submit">Search</button>
-     <input type="hidden" name="currentPage" value="<%=currentPage%>" /> <input
-        type="hidden" name="recordsPerPage" value="<%=recordsPerPage%>" />
+            type="submit">Search
+    </button>
+    <input type="hidden" name="currentPage" value="<%=currentPage%>"/> <input
+        type="hidden" name="recordsPerPage" value="<%=recordsPerPage%>"/>
 </form>
 
 <div class="content-section">
@@ -238,14 +249,14 @@
                 <%
                     out.println("<li class=\"page-item\">");
                     out.println("<a class=\"page-link\" href=\"" + "OrderPaginationServlet?recordsPerPage=" + recordsPerPage
-                            + "&currentPage=1"  + "&keyword=" + keyword +"\">First</a>");
+                            + "&currentPage=1" + "&keyword=" + keyword + "\">First</a>");
                     out.println("</li>");
                 %>
 
                 <li class="page-item">
                     <%
                         out.println("<a class=\"page-link\" href=\"" + "OrderPaginationServlet?recordsPerPage=" + recordsPerPage
-                                + "&currentPage=" + (currentPage - 1)  + "&keyword=" + keyword + "\">Previous</a>");
+                                + "&currentPage=" + (currentPage - 1) + "&keyword=" + keyword + "\">Previous</a>");
                     %>
                 </li>
                 <%
@@ -257,12 +268,12 @@
                     if (currentPage < nOfPages) {
                         out.println("<li class=\"page-item\">");
                         out.println("<a class=\"page-link\" href=\"" + "OrderPaginationServlet?recordsPerPage=" + recordsPerPage
-                                + "&currentPage=" + (currentPage + 1)  + "&keyword=" + keyword +
+                                + "&currentPage=" + (currentPage + 1) + "&keyword=" + keyword +
                                 "\">Next</a>");
                         out.println("</li>");
                         out.println("<li class=\"page-item\">");
                         out.println("<a class=\"page-link\" href=\"" + "OrderPaginationServlet?recordsPerPage=" + recordsPerPage
-                                + "&currentPage=" + nOfPages  + "&keyword=" + keyword + "\">Last</a>");
+                                + "&currentPage=" + nOfPages + "&keyword=" + keyword + "\">Last</a>");
                         out.println("</li>");
                     }
                 %>
@@ -291,27 +302,39 @@
                 <fieldset>
                     <legend>Add New Order:</legend>
                     <br> Customer Number:
-                    <input type="text" name="cnm" />
+                    <input type="text" name="cnm"/>
                     <br> Order Date:
-                    <input type="text" name="od" />
+                    <input type="text" name="od"/>
                     <br>Required Date:
-                    <input type="text" name="rd" />
+                    <input type="text" name="rd"/>
                     <br>Shipped Date:
-                    <input type="text" name="sd" />
+                    <input type="text" name="sd"/>
                     <br>Status:
-                    <input type="text" name="st" />
+                    <input type="text" name="st"/>
                     <br>Comment:
-                    <input type="text" name="com" />
+                    <input type="text" name="com"/>
                 </fieldset>
                 <button type="submit" class="btn">Submit</button>
                 <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
                 <button type="reset" class="btn">Reset</button>
             </form>
         </div>
+        <footer class="site-footer">
+            <div class="bottom-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <span>Copyright &copy; 2084 <a href="#">Kool Store</a> </span>
+                        </div> <!-- /.col-md-12 -->
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
+            </div> <!-- /.bottom-footer -->
+        </footer> <!-- /.site-footer -->
         <script>
             function openForm() {
                 document.getElementById("myForm").style.display = "block";
             }
+
             function closeForm() {
                 document.getElementById("myForm").style.display = "none";
             }

@@ -52,6 +52,14 @@
         form {
             padding: 15px;
         }
+        body{
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        footer{
+            margin-top: auto;
+        }
 
     </style>
 
@@ -71,6 +79,7 @@
                 <div class="col-md-6 col-sm-6">
                     <div class="top-header-left">
                         <a href="Logout.jsp">Logout</a>
+
                     </div> <!-- /.top-header-left -->
                 </div> <!-- /.col-md-6 -->
                 <div class="col-md-6 col-sm-6">
@@ -95,44 +104,29 @@
                         <h1><a href="#">Kool Store</a></h1>
                     </div> <!-- /.logo -->
                 </div> <!-- /.col-md-4 -->
-                <div class="col-md-8 col-sm-6 col-xs-4">
-                    <div class="main-menu">
-                        <a href="#" class="toggle-menu">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                        <ul class="menu">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Catalogs</a></li>
-                            <li><a href="#">FAQs</a></li>
-                            <li><a href="#">Policies</a></li>
-                            <li><a href="#">About</a></li>
-                        </ul>
-                    </div> <!-- /.main-menu -->
-                </div> <!-- /.col-md-8 -->
+
             </div> <!-- /.row -->
         </div> <!-- /.container -->
     </div> <!-- /.main-header -->
     <div class="main-nav">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-sm-7">
+                <div class="col-md">
                     <div class="list-menu">
                         <ul>
                             <li><a href="index.html">Shop</a></li>
-                            <li>
-                                <a href="ProductPaginationServlet?currentPage=1&recordsPerPage=12&admin=false&keyword=&sort=ASC">Catalogs</a>
-                            </li>
-                            <li><a href="ProductlineDisplayServlet?currentPage=1&recordsPerPage=12&&keyword=&sort=ASC">Productline</a>
-                            </li>
-                            <li><a href="contact.html">Contact</a></li>
-                            <li><a href="adminProductPage.html">Product Edit</a></li>
+                            <li><a href="ProductPaginationServlet?currentPage=1&recordsPerPage=12&admin=false&keyword=&sort=ASC">Catalogs</a></li>
+                            <li><a href="ProductPaginationServlet?currentPage=1&recordsPerPage=12&admin=true&keyword=&sort=ASC">Product Edit</a></li>
+                            <li><a href="ProductlineDisplayServlet?currentPage=1&recordsPerPage=12&&keyword=&sort=ASC">Productline</a></li>
+                            <li><a href="EmployeeReadController">Staff</a></li>
+                            <li><a href="customer.html">Customer</a></li>
+                            <li><a href="OfficeReadController">Office</a></li>
+                            <li><a href="payment.html">Payment</a></li>
+                            <li><a href="order.html">Order</a></li>
+                            <li><a href="orderdetails.html">Order Details</a></li>
+
                         </ul>
                     </div> <!-- /.list-menu -->
-                </div> <!-- /.col-md-6 -->
-                <div class="col-md-6 col-sm-5">
-                    <div class="notification">
-                        <span>Free Shipping on any order above $50</span>
-                    </div>
                 </div> <!-- /.col-md-6 -->
             </div> <!-- /.row -->
         </div> <!-- /.container -->
@@ -245,65 +239,11 @@
 
 
 <footer class="site-footer">
-    <div class="main-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="footer-widget">
-                        <h3 class="widget-title">About Us</h3>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, debitis recusandae.
-                        <ul class="follow-us">
-                            <li><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
-                        </ul> <!-- /.follow-us -->
-                    </div> <!-- /.footer-widget -->
-                </div> <!-- /.col-md-3 -->
-                <div class="col-md-3">
-                    <div class="footer-widget">
-                        <h3 class="widget-title">Why Choose Us?</h3>
-                        Kool Store is free responsive eCommerce template provided by templatemo website. You can use
-                        this layout for any website.
-                        <br><br>Tempore cum mollitia eveniet laboriosam corporis voluptas earum voluptate. Lorem ipsum
-                        dolor sit amet.
-                        <br><br>Credit goes to <a rel="nofollow" href="http://unsplash.com">Unsplash</a> for all images.
-                    </div> <!-- /.footer-widget -->
-                </div> <!-- /.col-md-3 -->
-                <div class="col-md-2">
-                    <div class="footer-widget">
-                        <h3 class="widget-title">Useful Links</h3>
-                        <ul>
-                            <li><a href="#">Our Shop</a></li>
-                            <li><a href="#">Partners</a></li>
-                            <li><a href="#">Gift Cards</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Help</a></li>
-                        </ul>
-                    </div> <!-- /.footer-widget -->
-                </div> <!-- /.col-md-2 -->
-                <div class="col-md-4">
-                    <div class="footer-widget">
-                        <h3 class="widget-title">Our Newsletter</h3>
-                        <div class="newsletter">
-                            <form action="#" method="get">
-                                <p>Sign up for our regular updates to know when new products are released.</p>
-                                <input type="text" title="Email" name="email" placeholder="Your Email Here">
-                                <input type="submit" class="s-button" value="Submit" name="Submit">
-                            </form>
-                        </div> <!-- /.newsletter -->
-                    </div> <!-- /.footer-widget -->
-                </div> <!-- /.col-md-4 -->
-            </div> <!-- /.row -->
-        </div> <!-- /.container -->
-    </div> <!-- /.main-footer -->
     <div class="bottom-footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <span>Copyright &copy; 2084 <a href="#">Company Name</a> | Design: <a
-                            href="http://www.templatemo.com">templatemo</a></span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, expedita soluta mollitia
-                        accusamus ut architecto maiores cum fugiat. Pariatur ipsum officiis fuga deleniti alias quia
-                        nostrum veritatis enim doloremque eligendi?</p>
+                    <span>Copyright &copy; 2084 <a href="#">Kool Store</a> </span>
                 </div> <!-- /.col-md-12 -->
             </div> <!-- /.row -->
         </div> <!-- /.container -->
