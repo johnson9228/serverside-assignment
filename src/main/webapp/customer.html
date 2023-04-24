@@ -23,6 +23,15 @@
         footer{
             margin-top: auto;
         }
+        .wrapper{
+            margin-left: 10rem;
+        }
+        h2{
+            margin-left: 1rem;
+        }
+        button{
+            margin-top:1.6rem;
+        }
     </style>
 </head>
 <body>
@@ -89,21 +98,25 @@
 </header> <!-- /.site-header -->
 
 <!--Check Customer-->
-<form action="CheckCustomerServlet">
-    <input name="currentPage" type="hidden" value="1">
-    <input name="keyword" type="hidden" value=""/>
-    <input name="direction" type="hidden" value="ASC">
-    <div class="form-group col-md-4">
-        <label for="records">Select records per page:</label> <select
-            class="form-control" id="records" name="recordsPerPage">
-        <option value="20">20</option>
-        <option selected value="50">50</option>
-        <option selected value="70">70</option>
-        <option value="100">100</option>
-    </select>
-    </div>
-    <button class="btn btn-primary" type="submit">Submit</button>
-</form>
+<div class="wrapper">
+    <h2>Customers</h2>
+    <form action="CheckCustomerServlet">
+        <input name="currentPage" type="hidden" value="1">
+        <input name="keyword" type="hidden" value=""/>
+        <input name="direction" type="hidden" value="ASC">
+        <div class="form-group col-md-4">
+            <label for="records">Select records per page:</label> <select
+                class="form-control" id="records" name="recordsPerPage">
+            <option value="20">20</option>
+            <option selected value="50">50</option>
+            <option selected value="70">70</option>
+            <option value="100">100</option>
+        </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+</div>
+
 <footer class="site-footer">
     <div class="bottom-footer">
         <div class="container">

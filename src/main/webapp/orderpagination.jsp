@@ -100,12 +100,14 @@
             text-align: center;
             font-weight: bold;
         }
-        body{
+
+        body {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
-        footer{
+
+        footer {
             margin-top: auto;
         }
     </style>
@@ -200,7 +202,7 @@
 </form>
 
 <div class="content-section">
-    <div class="row col-md-6">
+    <div class="row col-md-6" style="width: 100%; padding: 0;margin: 0;">
         <table class="table table-striped table-bordered table-sm">
             <tr>
                 <th>Order Number</th>

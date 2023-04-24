@@ -10,8 +10,10 @@
 
     <!-- CSS links -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -66,13 +68,19 @@
         table th, td {
             text-align: center;
         }
-        body{
+
+        body {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
-        footer{
+
+        footer {
             margin-top: auto;
+        }
+        .row-column{
+            display: flex;
+            padding: 1rem 1rem 0;
         }
     </style>
 </head>
@@ -127,9 +135,14 @@
                     <div class="list-menu">
                         <ul>
                             <li><a href="index.html">Shop</a></li>
-                            <li><a href="ProductPaginationServlet?currentPage=1&recordsPerPage=12&admin=false&keyword=&sort=ASC">Catalogs</a></li>
-                            <li><a href="ProductPaginationServlet?currentPage=1&recordsPerPage=12&admin=true&keyword=&sort=ASC">Product Edit</a></li>
-                            <li><a href="ProductlineDisplayServlet?currentPage=1&recordsPerPage=12&&keyword=&sort=ASC">Productline</a></li>
+                            <li>
+                                <a href="ProductPaginationServlet?currentPage=1&recordsPerPage=12&admin=false&keyword=&sort=ASC">Catalogs</a>
+                            </li>
+                            <li>
+                                <a href="ProductPaginationServlet?currentPage=1&recordsPerPage=12&admin=true&keyword=&sort=ASC">Product
+                                    Edit</a></li>
+                            <li><a href="ProductlineDisplayServlet?currentPage=1&recordsPerPage=12&&keyword=&sort=ASC">Productline</a>
+                            </li>
                             <li><a href="EmployeeReadController">Staff</a></li>
                             <li><a href="customer.html">Customer</a></li>
                             <li><a href="OfficeReadController">Office</a></li>
@@ -155,29 +168,36 @@
     String direction = (String) request.getAttribute("direction");
 %>
 
-<nav class="navbar navbar-light bg-light" style="margin: 0">
-    <!-- Search bar for the table -->
-    <form class="form-inline md-form mr-auto mb-4" action="EmployeeReadController" method="post">
-        <input class="form-control" type="text" aria-label="Search" name="keyword"/>
-        <select class="form-control" id="direction" name="direction">
-            <option value="ASC">ascending</option>
-            <option value="DESC">descending</option>
-        </select>
-        <button class="btn btn-primary" type="submit">
-            Search
-        </button>
-        <input type="hidden" name="currentPage" value="<%=currentPage%>"/>
-        <input type="hidden" name="recordsPerPage" value="<%=recordsPerPage%>"/>
-        <input type="hidden" name="currentPage" value="<%=currentPage%>"/>
-        <input type="hidden" name="recordsPerPage" value="<%=recordsPerPage%>"/>
-        <input type="hidden" name="keyword" value="<%=keyword%>"/>
-    </form>
+<div class="wrapper">
 
-    <!-- Create employee button -->
-    <div class="float-right" style="text-align: center;">
-        <button class="btn btn-primary mr-0" onclick="openCreateForm()">Create new employee</button>
+    <div class="row-column">
+        <form class="form-inline md-form mr-auto mb-4" action="EmployeeReadController" method="post">
+            <input style="margin-right: 5px;" class="form-control" type="text" aria-label="Search" name="keyword"/>
+            <select style="margin-right: 5px;" class="form-control" id="direction" name="direction">
+                <option value="ASC">ascending</option>
+                <option value="DESC">descending</option>
+            </select>
+            <button class="btn btn-primary" type="submit">
+                Search
+            </button>
+            <input type="hidden" name="currentPage" value="<%=currentPage%>"/>
+            <input type="hidden" name="recordsPerPage" value="<%=recordsPerPage%>"/>
+            <input type="hidden" name="currentPage" value="<%=currentPage%>"/>
+            <input type="hidden" name="recordsPerPage" value="<%=recordsPerPage%>"/>
+            <input type="hidden" name="keyword" value="<%=keyword%>"/>
+        </form>
+
+        <!-- Create employee button -->
+        <div>
+            <button class="btn btn-primary mr-0" onclick="openCreateForm()">Create new employee</button>
+        </div>
     </div>
-</nav>
+
+
+
+    </nav>
+</div>
+
 
 <!-- Employee table -->
 <div style="display: flex">
@@ -307,7 +327,9 @@
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
 <script>
     function openCreateForm() {
         document.getElementById("createEmployeeForm").style.display = "block";

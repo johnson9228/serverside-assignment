@@ -73,6 +73,10 @@
         footer{
             margin-top: auto;
         }
+        .row-column{
+            display: flex;
+            padding: 1rem 1rem 0;
+        }
     </style>
 </head>
 <body>
@@ -153,11 +157,11 @@
     String direction = (String) request.getAttribute("direction");
 %>
 
-<nav class="navbar navbar-light bg-light" style="margin: 0">
+<div class="row-column">
     <!-- Search bar for the table -->
     <form class="form-inline md-form mr-auto mb-4" action="OfficeReadController" method="post">
-        <input class="form-control" type="text" aria-label="Search" name="keyword"/>
-        <select class="form-control" id="direction" name="direction">
+        <input  style="margin-right: 5px;" class="form-control" type="text" aria-label="Search" name="keyword"/>
+        <select  style="margin-right: 5px;" class="form-control" id="direction" name="direction">
             <option value="ASC">ascending</option>
             <option value="DESC">descending</option>
         </select>
@@ -172,10 +176,12 @@
     </form>
 
     <!-- Create employee button -->
-    <div class="float-right" style="text-align: center;">
+    <div >
         <button class="btn btn-primary mr-0" onclick="openCreateForm()">Create new employee</button>
     </div>
-</nav>
+</div>
+
+
 
 <!-- Office table -->
 <div style="display: flex">
