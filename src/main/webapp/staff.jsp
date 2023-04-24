@@ -175,7 +175,6 @@
 %>
 
 <div class="wrapper">
-
     <div class="row-column">
         <form class="form-inline md-form mr-auto mb-4" action="EmployeeReadController" method="post">
             <input style="margin-right: 5px;" class="form-control" type="text" aria-label="Search" name="keyword"/>

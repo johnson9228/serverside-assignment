@@ -9,8 +9,10 @@
 
     <!-- CSS links -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -65,15 +67,18 @@
         table th, td {
             text-align: center;
         }
-        body{
+
+        body {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
-        footer{
+
+        footer {
             margin-top: auto;
         }
-        .row-column{
+
+        .row-column {
             display: flex;
             padding: 1rem 1rem 0;
         }
@@ -130,9 +135,14 @@
                     <div class="list-menu">
                         <ul>
                             <li><a href="index.html">Shop</a></li>
-                            <li><a href="ProductPaginationServlet?currentPage=1&recordsPerPage=12&admin=false&keyword=&sort=ASC">Catalogs</a></li>
-                            <li><a href="ProductPaginationServlet?currentPage=1&recordsPerPage=12&admin=true&keyword=&sort=ASC">Product Edit</a></li>
-                            <li><a href="ProductlineDisplayServlet?currentPage=1&recordsPerPage=12&&keyword=&sort=ASC">Productline</a></li>
+                            <li>
+                                <a href="ProductPaginationServlet?currentPage=1&recordsPerPage=12&admin=false&keyword=&sort=ASC">Catalogs</a>
+                            </li>
+                            <li>
+                                <a href="ProductPaginationServlet?currentPage=1&recordsPerPage=12&admin=true&keyword=&sort=ASC">Product
+                                    Edit</a></li>
+                            <li><a href="ProductlineDisplayServlet?currentPage=1&recordsPerPage=12&&keyword=&sort=ASC">Productline</a>
+                            </li>
                             <li><a href="EmployeeReadController">Staff</a></li>
                             <li><a href="customer.html">Customer</a></li>
                             <li><a href="OfficeReadController">Office</a></li>
@@ -157,30 +167,31 @@
     String direction = (String) request.getAttribute("direction");
 %>
 
-<div class="row-column">
-    <!-- Search bar for the table -->
-    <form class="form-inline md-form mr-auto mb-4" action="OfficeReadController" method="post">
-        <input  style="margin-right: 5px;" class="form-control" type="text" aria-label="Search" name="keyword"/>
-        <select  style="margin-right: 5px;" class="form-control" id="direction" name="direction">
-            <option value="ASC">ascending</option>
-            <option value="DESC">descending</option>
-        </select>
-        <button class="btn btn-primary" type="submit">
-            Search
-        </button>
-        <input type="hidden" name="currentPage" value="<%=currentPage%>"/>
-        <input type="hidden" name="recordsPerPage" value="<%=recordsPerPage%>"/>
-        <input type="hidden" name="currentPage" value="<%=currentPage%>"/>
-        <input type="hidden" name="recordsPerPage" value="<%=recordsPerPage%>"/>
-        <input type="hidden" name="keyword" value="<%=keyword%>"/>
-    </form>
+<div class="wrapper">
+    <div class="row-column">
+        <!-- Search bar for the table -->
+        <form class="form-inline md-form mr-auto mb-4" action="OfficeReadController" method="post">
+            <input style="margin-right: 5px;" class="form-control" type="text" aria-label="Search" name="keyword"/>
+            <select style="margin-right: 5px;" class="form-control" id="direction" name="direction">
+                <option value="ASC">ascending</option>
+                <option value="DESC">descending</option>
+            </select>
+            <button class="btn btn-primary" type="submit">
+                Search
+            </button>
+            <input type="hidden" name="currentPage" value="<%=currentPage%>"/>
+            <input type="hidden" name="recordsPerPage" value="<%=recordsPerPage%>"/>
+            <input type="hidden" name="currentPage" value="<%=currentPage%>"/>
+            <input type="hidden" name="recordsPerPage" value="<%=recordsPerPage%>"/>
+            <input type="hidden" name="keyword" value="<%=keyword%>"/>
+        </form>
 
-    <!-- Create employee button -->
-    <div >
-        <button class="btn btn-primary mr-0" onclick="openCreateForm()">Create new employee</button>
+        <!-- Create office button -->
+        <div>
+            <button class="btn btn-primary mr-0" onclick="openCreateForm()">Create new office</button>
+        </div>
     </div>
 </div>
-
 
 
 <!-- Office table -->
@@ -275,32 +286,48 @@
 <!-- Create office form -->
 <div class="form-popup" id="createOfficeForm" style="display: none">
     <form action="OfficeController" method="post" class="form-container">
-        <h1>Create New Office</h1>
-        <fieldset>
-            <legend>Office Details</legend>
-            <br>
-            <input type="text" name="city" placeholder="City"/>
-            <br>
-            <input type="text" name="phone" placeholder="Phone Number"/>
-            <br>
-            <input type="text" name="addressLine1" placeholder="Address Line 1"/>
-            <br>
-            <input type="text" name="addressLine2" placeholder="Address Line 2"/>
-            <br>
-            <input type="text" name="state" placeholder="State"/>
-            <br>
-            <input type="text" name="country" placeholder="Country"/>
-            <br>
-            <input type="text" name="postalCode" placeholder="Postal Code"/>
-            <br>
-            <input type="text" name="territory" placeholder="Territory"/>
-            <input type="hidden" name="choice" value="2"/>
-        </fieldset>
-        <button type="submit">CREATE</button>
-        <button type="reset">CLEAR</button>
-        <button type="button" onclick="closeCreateForm()">CANCEL</button>
+        <h1 style="text-align: center;">Create New Office</h1>
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city" name="city" placeholder="City">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone">
+        </div>
+        <div class="form-group">
+            <label for="addressLine1">Address Line 1</label>
+            <input type="text" class="form-control" id="addressLine1" name="addressLine1" placeholder="Address Line 1">
+        </div>
+        <div class="form-group">
+            <label for="addressLine2">Address Line 2</label>
+            <input type="text" class="form-control" id="addressLine2" name="addressLine2" placeholder="Address Line 2">
+        </div>
+        <div class="form-group">
+            <label for="state">State</label>
+            <input type="text" class="form-control" id="state" name="state" placeholder="State">
+        </div>
+        <div class="form-group">
+            <label for="country">Country</label>
+            <input type="text" class="form-control" id="country" name="country" placeholder="Country">
+        </div>
+        <div class="form-group">
+            <label for="postalCode">Postal Code</label>
+            <input type="text" class="form-control" id="postalCode" name="postalCode" placeholder="Postal Code">
+        </div>
+        <div class="form-group">
+            <label for="territory">Territory</label>
+            <input type="text" class="form-control" id="territory" name="territory" placeholder="Territory">
+        </div>
+        <input type="hidden" name="choice" value="2"/>
+        <div style="justify-content: center; display: flex">
+            <button style="margin-right: 30px" class="btn-primary btn" type="submit">CREATE</button>
+            <button style="margin-right: 30px" class="btn btn-warning" type="reset">CLEAR</button>
+            <button class="btn btn-info" type="button" onclick="closeCreateForm()">CANCEL</button>
+        </div>
     </form>
 </div>
+
 <footer class="site-footer">
     <div class="bottom-footer">
         <div class="container">
