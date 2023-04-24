@@ -96,7 +96,63 @@
             <role-name>admin</role-name>
         </auth-constraint>
     </security-constraint>
+    <security-constraint>
+        <display-name>Payment page</display-name>
+        <web-resource-collection>
+            <web-resource-name>Database</web-resource-name>
+            <description/>
+            <url-pattern>/payment.html</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description>admindatabase</description>
+            <role-name>admin</role-name>
+            <role-name>user</role-name>
+            <role-name>staff</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <security-constraint>
+        <display-name>Customer page</display-name>
+        <web-resource-collection>
+            <web-resource-name>Database</web-resource-name>
+            <description/>
+            <url-pattern>/customer.html</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description>admindatabase</description>
+            <role-name>admin</role-name>
+            <role-name>user</role-name>
+            <role-name>staff</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <security-constraint>
+        <display-name>Create customer page</display-name>
+        <web-resource-collection>
+            <web-resource-name>Database</web-resource-name>
+            <description/>
+            <url-pattern>/create-customer.html</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description>admindatabase</description>
+            <role-name>admin</role-name>
+            <role-name>user</role-name>
+            <role-name>staff</role-name>
+        </auth-constraint>
+    </security-constraint>
 
+    <security-constraint>
+        <display-name>Create payment page</display-name>
+        <web-resource-collection>
+            <web-resource-name>Database</web-resource-name>
+            <description/>
+            <url-pattern>/create-payment.html</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description>admindatabase</description>
+            <role-name>admin</role-name>
+            <role-name>user</role-name>
+            <role-name>staff</role-name>
+        </auth-constraint>
+    </security-constraint>
 
 
 
