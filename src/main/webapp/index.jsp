@@ -70,41 +70,28 @@
                         <h1><a href="#">Kool Store</a></h1>
                     </div> <!-- /.logo -->
                 </div> <!-- /.col-md-4 -->
-                <div class="col-md-8 col-sm-6 col-xs-4">
-                    <div class="main-menu">
-                        <a href="#" class="toggle-menu">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                        <ul class="menu">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Catalogs</a></li>
-                            <li><a href="#">FAQs</a></li>
-                            <li><a href="#">Policies</a></li>
-                            <li><a href="#">About</a></li>
-                        </ul>
-                    </div> <!-- /.main-menu -->
-                </div> <!-- /.col-md-8 -->
+
             </div> <!-- /.row -->
         </div> <!-- /.container -->
     </div> <!-- /.main-header -->
     <div class="main-nav">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-sm-7">
+                <div class="col-md">
                     <div class="list-menu">
                         <ul>
                             <li><a href="index.html">Shop</a></li>
                             <li><a href="ProductPaginationServlet?currentPage=1&recordsPerPage=12&admin=false&keyword=&sort=ASC">Catalogs</a></li>
                             <li><a href="ProductlineDisplayServlet?currentPage=1&recordsPerPage=12&&keyword=&sort=ASC">Productline</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                            <li><a href="adminProductPage.html">Product Edit</a></li>
+                            <li><a href="EmployeeReadController">Staff</a></li>
+                            <li><a href="customer.html">Customer</a></li>
+                            <li><a href="OfficeReadController">Office</a></li>
+                            <li><a href="payment.html">Payment</a></li>
+                            <li><a href="order.html">Order</a></li>
+                            <li><a href="orderdetails.html.html">Order Details</a></li>
+
                         </ul>
                     </div> <!-- /.list-menu -->
-                </div> <!-- /.col-md-6 -->
-                <div class="col-md-6 col-sm-5">
-                    <div class="notification">
-                        <span>Free Shipping on any order above $50</span>
-                    </div>
                 </div> <!-- /.col-md-6 -->
             </div> <!-- /.row -->
         </div> <!-- /.container -->

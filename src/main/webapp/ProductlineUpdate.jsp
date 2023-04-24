@@ -63,9 +63,12 @@
             <%
                 out.println("<input type=\"text\" name=\"image\" id=\"image\" " + productline.getImage() + ">");
             %>
+
         </div>
+
         <div class="right">
-            <button class="btn btn-primary" type="update">Update</button>
+            <button class="btn btn-primary" name="UPDATE" value="UPDATE">Update</button>
+            <button class="btn btn-primary" name="DELETE" value="DELETE">Delete</button>
         </div>
     </form>
 </div>
