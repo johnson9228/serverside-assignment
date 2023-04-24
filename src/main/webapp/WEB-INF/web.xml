@@ -71,6 +71,32 @@
         </auth-constraint>
     </security-constraint>
 
+    <security-constraint>
+        <display-name>StaffPage</display-name>
+        <web-resource-collection>
+            <web-resource-name>Database</web-resource-name>
+            <description/>
+            <url-pattern>/EmployeeReadController</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description>admindatabase</description>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <display-name>OfficePage</display-name>
+        <web-resource-collection>
+            <web-resource-name>Database</web-resource-name>
+            <description/>
+            <url-pattern>/OfficeReadController</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description>admindatabase</description>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+
 
 
 

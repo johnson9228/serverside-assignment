@@ -144,9 +144,7 @@
                             <li>
                                 <a href="ProductPaginationServlet?currentPage=1&recordsPerPage=12&admin=false&keyword=&sort=ASC">Catalogs</a>
                             </li>
-                            <li>
-                                <a href="ProductPaginationServlet?currentPage=1&recordsPerPage=12&admin=true&keyword=&sort=ASC">Product
-                                    Edit</a></li>
+                            <li><a href="adminProductPage.html">Product Edit</a></li>
                             <li><a href="ProductlineDisplayServlet?currentPage=1&recordsPerPage=12&&keyword=&sort=ASC">Productline</a>
                             </li>
                             <li><a href="EmployeeReadController">Staff</a></li>
