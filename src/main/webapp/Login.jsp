@@ -37,10 +37,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-6">
-                    <div class="top-header-left">
-                        <a href="Logout.jsp">Logout</a>
-
-                    </div> <!-- /.top-header-left -->
                 </div> <!-- /.col-md-6 -->
                 <div class="col-md-6 col-sm-6">
                     <div class="social-icons">
@@ -93,18 +89,18 @@
     </div> <!-- /.main-nav -->
 </header> <!-- /.site-header -->
 <div style="width: 100%;display: grid;justify-content: center;">
-    <form method="post" action="<%=response.encodeURL("j_security_check")%>" style="display: grid; justify-content: center; margin-top: 200px; padding: 50px; background-color: #E5E4E2">
+    <form method="post" action="<%=response.encodeURL("j_security_check")%>" style="display: grid; justify-content: center; margin:4rem; padding: 50px; background-color: #E5E4E2">
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon3">Username:</span>
+                <label>Username:</label>
             </div>
-            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" name="j_username">
+            <input type="text" class="form-control"  aria-describedby="basic-addon3" name="j_username">
         </div>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon3"> Password: </span>
+                <label > Password: </label>
             </div>
-            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" name="j_password">
+            <input type="text" class="form-control" aria-describedby="basic-addon3" name="j_password">
         </div>
         <%--    Username: <input type="text" name="j_username"/>--%>
         <%--    Password: <input type="password" name="j_password"/>--%>

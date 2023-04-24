@@ -164,7 +164,7 @@
 %>
 
 <div>
-    <div class="row col-md-6">
+    <div class="row col-md-6" style="width: 100%; padding: 0;margin: 0;">
         <table class="table table-striped table-bordered table-sm">
             <tr>
                 <th>Order Number</th>

@@ -30,7 +30,7 @@
         .right {
             float: right;
         }
-        h6{
+        h5{
             margin-bottom: 2rem;
         }
         body{
@@ -109,7 +109,7 @@
 
     <form class="needs-validation" novalidate action="CustomerController" method="post">
         <div class="row justify-content-center">
-            <h6>Are you sure you want to delete the following item?</h6>
+            <h5>Are you sure you want to delete the following item?</h5>
         </div>
         <div class="form-group row">
             <label class="col-sm-4 col-form-label">Customer Number: </label>

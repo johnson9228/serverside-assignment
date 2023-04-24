@@ -11,8 +11,7 @@
 <html>
 <head>
     <title>Check Customer</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-          rel="stylesheet">
+
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/normalize.min.css">
@@ -20,6 +19,8 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/templatemo-misc.css">
     <link rel="stylesheet" href="css/templatemo-style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          rel="stylesheet">
 
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <style>
@@ -257,7 +258,7 @@
         }
     %>
     <nav>
-        <ul class="pagination">
+        <ul class="pagination" style="float: right">
             <%
                 if (currentPage != 1 && nOfPages != 0) {
                     out.println("<li class=\"page-item\">");
